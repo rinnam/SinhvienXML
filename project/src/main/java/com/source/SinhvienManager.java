@@ -1,17 +1,10 @@
 package com.source;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-
-import javax.xml.bind.Unmarshaller;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
-import java.io.File;
 
 import java.io.IOException;
 import java.net.Socket;
-import java.util.List;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -207,26 +200,13 @@ public class SinhvienManager {
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Get the selected row index
-                int selectedRowIndex = table.getSelectedRow();
+                // Clear the table data
+                tableModel.setRowCount(0);
                 
-                // Check if a row is selected
-                if (selectedRowIndex != -1) {
-                    // Get the data from the selected row
-                    String id = "";
-                    String name = "";
-                    String address = "";
-                    
-                    // Update the data in the table
-                    tableModel.setValueAt(id, selectedRowIndex, 0);
-                    tableModel.setValueAt(name, selectedRowIndex, 1);
-                    tableModel.setValueAt(address, selectedRowIndex, 2);
-                    
-                    // Clear the text fields
-                    idTextField.setText("");
-                    nameTextField.setText("");
-                    addressTextField.setText("");
-                }
+                // Clear the text fields
+                idTextField.setText("");
+                nameTextField.setText("");
+                addressTextField.setText("");
             }
         });
 
