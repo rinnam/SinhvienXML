@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sinhviens>
+    <sinhvien>
+        <id>tai</id>
+        <name>sao</name>
+        <address>k dc</address>
+    </sinhvien>
+    <sinhvien>
+        <id>aaa</id>
+        <name>sdsdsd</name>
+        <address>ádsadsadsadsa</address>
+    </sinhvien>
+    <sinhvien>
+        <id>dsdsd</id>
+        <name>ádsad</name>
+        <address>sdsdas</address>
+    </sinhvien>
+    <sinhvien>
+        <id>dsd</id>
+        <name>dsd</name>
+        <address>dsadsa</address>
+    </sinhvien>
+</sinhviens>
