@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sinhviens>
+    <sinhvien>
+        <id>2</id>
+        <name>Trần Văn Hoàng</name>
+        <address>Tam kỳ</address>
+    </sinhvien>
+    <sinhvien>
+        <id>3</id>
+        <name>Đoàn Ngọc Quốc Huy</name>
+        <address>BQ</address>
+    </sinhvien>
+    <sinhvien>
+        <id>4</id>
+        <name>Trần Tiến Dũng</name>
+        <address>BS</address>
+    </sinhvien>
+    <sinhvien>
+        <id>1</id>
+        <name>Huynh Kim Nam</name>
+        <address>BD</address>
+    </sinhvien>
+</sinhviens>
