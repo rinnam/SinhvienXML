@@ -5,11 +5,17 @@ import java.io.DataOutputStream;
 
 import java.io.IOException;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -98,7 +104,7 @@ public class SinhvienManager {
 
 
         try {
-            s = new Socket("192.168.0.8", 1234);
+            s = new Socket("192.168.1.126", 1234);
             in = new DataInputStream(s.getInputStream());
             out = new DataOutputStream(s.getOutputStream());
         } catch (IOException e) {
@@ -116,21 +122,53 @@ public class SinhvienManager {
                 String name = nameTextField.getText();
                 String address = addressTextField.getText();
                 
-                // Loop through each row in the table
+                
+                List<Sinhvien> sinhviens = find( id, name, address);
+
+                if (sinhviens.size() == 0) {
+                    JOptionPane.showMessageDialog(frame, "No matching student found!", "Search", JOptionPane.INFORMATION_MESSAGE);
+                } else {
+                    tableModel.setRowCount(0);
+                    for (Sinhvien sv : sinhviens) {
+                        Object[] rowData = {sv.getId(), sv.getName(), sv.getAddress()};
+                        tableModel.addRow(rowData);
+                    }
+                }
+
+                
+            }
+
+            private List<Sinhvien> find(String id, String name, String address) {
+
+                List<Sinhvien> sinhviens = new ArrayList<>();
+
                 for (int i = 0; i < tableModel.getRowCount(); i++) {
                     String tableId = tableModel.getValueAt(i, 0).toString();
                     String tableName = tableModel.getValueAt(i, 1).toString();
                     String tableAddress = tableModel.getValueAt(i, 2).toString();
                     
-                    // Check if the row matches the search criteria
-                    if (id.equals(tableId) && name.equals(tableName) && address.equals(tableAddress)) {
-                        // Select the matching row in the table
-                        table.setRowSelectionInterval(i, i);
-                        table.scrollRectToVisible(table.getCellRect(i, 0, true));
-                        break;
+                    
+                    if (id.equals(tableId)) {
+                        List<Sinhvien> sinhviens2 = new ArrayList<>();
+                        Sinhvien currentSinhvien = new Sinhvien(tableId, tableName, tableAddress);
+                        sinhviens2.add(currentSinhvien);
+                        return sinhviens2;
+                        
+                    } else if(name.equals(tableName) || address.equals(tableAddress)) {
+                        Sinhvien currentSinhvien = new Sinhvien(tableId, tableName, tableAddress);
+                        sinhviens.add(currentSinhvien);                 
                     }
+
                 }
+
+                return sinhviens;
+
+
             }
+
+            // Note: da update kha nang tim kiem nhung can chinh sua them id khong duoc trung nhau
+            
+            
         });
 
         addButton.addActionListener(new ActionListener() {

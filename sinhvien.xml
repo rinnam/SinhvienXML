@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <sinhviens>
-    <sinhvien>
-        <id>1</id>
-        <name>Huỳnh Kim Nam</name>
-        <address>Bình Đào</address>
+    <sinhvien id="1">
+        <name>a</name>
+        <address>BD</address>
     </sinhvien>
-    <sinhvien>
-        <id>2</id>
-        <name>Đoàn Ngọc Quốc Huy</name>
-        <address>Bình Quý</address>
+    <sinhvien id="2">
+        <name>b</name>
+        <address>BM</address>
     </sinhvien>
-    <sinhvien>
-        <id>dsd</id>
-        <name>âsdsdd</name>
-        <address>dsdsd</address>
+    <sinhvien id="3">
+        <name>c</name>
+        <address>BH</address>
+    </sinhvien>
+    <sinhvien id="5">
+        <name>a</name>
+        <address>DC</address>
+    </sinhvien>
+    <sinhvien id="6">
+        <name>e</name>
+        <address>BM</address>
+    </sinhvien>
+    <sinhvien id="1">
+        <name>Rin</name>
+        <address>BD</address>
+    </sinhvien>
+    <sinhvien id="23">
+        <name>b</name>
+        <address>12</address>
     </sinhvien>
 </sinhviens>
