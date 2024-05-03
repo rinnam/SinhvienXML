@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <sinhviens>
-    <sinhvien>
-        <id>2</id>
-        <name>Trần Văn Hoàng</name>
-        <address>Tam kỳ</address>
+    <sinhvien id="1">
+        <name>Nam</name>
+        <address>DB</address>
     </sinhvien>
-    <sinhvien>
-        <id>3</id>
-        <name>Đoàn Ngọc Quốc Huy</name>
-        <address>BQ</address>
+    <sinhvien id="2">
+        <name>Tin</name>
+        <address>DN</address>
     </sinhvien>
-    <sinhvien>
-        <id>4</id>
-        <name>Trần Tiến Dũng</name>
-        <address>BS</address>
+    <sinhvien id="1">
+        <name>Rin</name>
+        <address>DB</address>
     </sinhvien>
-    <sinhvien>
-        <id>1</id>
-        <name>Huynh Kim Nam</name>
-        <address>BD</address>
+    <sinhvien id="4">
+        <name>Tin</name>
+        <address>ND</address>
     </sinhvien>
 </sinhviens>
